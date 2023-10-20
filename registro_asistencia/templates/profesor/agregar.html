@@ -1,0 +1,78 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-3 mb-lg-5 " style="width: 60%;">
+            <div class="card form-group" style="padding: 5px;">
+
+                <h2 style="margin-top: 10px;">Agregar Profesor</h2>
+                <form method="POST" style="padding: 10px;">
+                    {% csrf_token %}
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-outline">
+                                <label class="form-label" for="primer_nombre">Primer nombre</label>
+                                <input type="text" id="primer_nombre" name="primer_nombre" class="form-control"
+                                    style="border-radius: 0.8rem ;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline">
+                                <label class="form-label" for="segundo_nombre">Segundo nombre</label>
+                                <input type="text" id="segundo_nombre" name="segundo_nombre" class="form-control"
+                                    style="border-radius: 0.8rem ;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-outline">
+                                <label class="form-label" for="apellido_paterno">Apellido Paterno</label>
+                                <input type="text" id="apellido_paterno" name="apellido_paterno" class="form-control"
+                                    style="border-radius: 0.8rem ;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);" />
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline">
+                                <label class="form-label" for="apellido_materno">Apellido Materno</label>
+                                <input type="text" id="apellido_materno" name="apellido_materno" class="form-control"
+                                    style="border-radius: 0.8rem ;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4 col-5">
+                        <label class="form-label" for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" class="form-control"
+                            style="border-radius: 0.8rem ;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);" />
+                    </div>
+
+                    <!-- Number input -->
+                    <div class="form-outline mb-4 col-5">
+                        <label class="form-label" for="num_dni">DNI</label>
+                        <input type="text" id="num_dni" name="num_dni" maxlength="8" class="form-control"
+                            style="border-radius: 0.8rem ;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);" />
+                    </div>
+
+                    <!-- Number input -->
+                    <div class="form-outline mb-4 col-5">
+                        <label class="form-label" for="num_celular">Celular</label>
+                        <input type="text" id="num_celular" name="num_celular" class="form-control" maxlength="9"
+                            required
+                            style="border-radius: 0.8rem ;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="{% url 'lista_profesores' %}" class="btn btn-secondary">Volver</a>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

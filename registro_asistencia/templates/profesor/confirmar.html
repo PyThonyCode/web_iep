@@ -1,0 +1,19 @@
+{% extends 'base1.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card py-3" style="width: 50%; padding: 20px;">
+                <h1>Confirmar Eliminación</h1>
+                <p>¿Estás seguro de que deseas eliminar al profesor {{ profesor }}?</p>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success">Confirmar</button>
+                    <a href="{% url 'lista_profesores' %}" class="btn btn-danger">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-3 mb-lg-5">
+            <div class="overflow-hidden card table-nowrap table-card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">LISTA DE ASISTENCIAS DE CLASE</h5>
+                    <a href="{% url 'agregar_asistencia_clase' %}" class="btn"
+                        style="background-color: rgba(55, 94, 70, 0.747); color: white;">Agregar</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead class="small text-uppercase bg-body text-muted">
+                            <tr>
+                                <th>FECHA</th>
+                                <th>HORARIO</th>
+                                <th>PROFESOR</th>
+                                <th>AREA</th>
+                                <th>TEMA DESARROLLADO</th>
+                                <th>GRADO</th>
+                                <th class="text-end">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for asistencias in asistencias %}
+                            <tr class="align-middle">
+                                <td>{{ asistencias.fecha_asistencia }}</td>
+                                <td><span>{{ asistencias.horario }}</span></td>
+                                <td> <span class="d-inline-block align-middle">{{ asistencias.profesor }}</span>
+                                </td>
+                                <td>{{ asistencias.area }}</td>
+                                <td>{{ asistencias.tema }}</td>
+                                <td>{{ asistencias.grado }}</td>
+                                <td class="text-end">
+                                    <div class="drodown">
+                                        <a data-bs-toggle="dropdown" href="#" class="btn p-1" aria-expanded="false">
+                                            <i class="bi bi-justify" aria-hidden="true"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a href="{% url 'eliminar_asistencia_clase' asistencias.id %}"
+                                                class="dropdown-item">Eliminar</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

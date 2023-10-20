@@ -1,0 +1,55 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-3 mb-lg-5">
+            <div class="overflow-hidden card table-nowrap table-card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">LISTA DE PROFESORES</h5>
+                    <a href="{% url 'agregar_profesor' %}" class="btn"
+                        style="background-color: rgba(55, 94, 70, 0.747); color: white;">Agregar</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                        <thead class="small text-uppercase bg-body text-muted">
+                            <tr>
+                                <th>NOMBRES</th>
+                                <th>APELLIDOS</th>
+                                <th>EMAIL</th>
+                                <th>DNI</th>
+                                <th>CELULAR</th>
+                                <th class="text-end">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for profesor in profesores %}
+                            <tr class="align-middle">
+                                <td>{{ profesor.primer_nombre }} {{ profesor.segundo_nombre }}</td>
+                                <td>{{ profesor.apellido_paterno }} {{ profesor.apellido_materno }}</td>
+                                <td><span>{{ profesor.correo }}</span></td>
+                                <td> <span class="d-inline-block align-middle">{{ profesor.num_dni }}</span></td>
+                                <td>{{ profesor.num_celular }}</td>
+                                <td class="text-end">
+                                    <div class="drodown">
+                                        <a data-bs-toggle="dropdown" href="#" class="btn p-1" aria-expanded="false">
+                                            <i class="bi bi-justify" aria-hidden="true"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a href="{% url 'editar_profesor' profesor.id %}"
+                                                class="dropdown-item">Editar</a>
+                                            <a href="{% url 'eliminar_profesor' profesor.id %}"
+                                                class="dropdown-item">Eliminar</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

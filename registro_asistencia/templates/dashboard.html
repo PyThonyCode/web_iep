@@ -1,0 +1,49 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Dashboard</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Asistencia de Clases</h4>
+
+                    <table class="table mb-0">
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Cantidad</th>
+                        </tr>
+                        {% for asistencia in asistencia_clase_count %}
+                        <tr>
+                            <td>{{ asistencia.fecha_asistencia }}</td>
+                            <td>{{ asistencia.total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Asistencia de Profesor</h4>
+                    <table class="table mb-0">
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Cantidad</th>
+                        </tr>
+                        {% for asistencia in asistencia_profesor_count %}
+                        <tr>
+                            <td>{{ asistencia.fecha_asistencia }}</td>
+                            <td>{{ asistencia.total }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
