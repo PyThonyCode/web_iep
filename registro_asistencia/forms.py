@@ -25,7 +25,7 @@ class AsistenciaProfesorForm(forms.ModelForm):
                   'hora_llegada', 'hora_salida', 'motivo_falta']
 
         widgets = {
-            'profesor': forms.Select(attrs={'class': 'form-select', 'style': 'width:400px'}),
+            'profesor': forms.Select(attrs={'class': 'form-select', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
             'asistencia': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
             'fecha_asistencia': forms.DateInput(attrs={'class': 'form-control'}),
             'hora_llegada': forms.TimeInput(attrs={'class': 'form-control'}),
