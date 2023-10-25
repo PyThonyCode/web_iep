@@ -6,7 +6,7 @@
         <div class="col-12 mb-3 mb-lg-5" style="width: 60%;">
             <div class="card form-group" style="padding: 5px;">
                 <h2>Agregar Asistencia</h2>
-                <form method="post">
+                <form method="post" style="padding: 10px;">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="submit" class="btn btn-primary">Guardar</button>
