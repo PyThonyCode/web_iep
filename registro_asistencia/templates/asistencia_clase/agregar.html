@@ -3,14 +3,16 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-12 mb-3 mb-lg-5">
-            <h2>Agregar Asistencia</h2>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Guardar</button>
-                <a href="{% url 'lista_asistencia_clase' %}" class="btn btn-secondary">Volver</a>
-            </form>
+        <div class="col-12 mb-3 mb-lg-5" style="width: 60%;">
+            <div class="card form-group" style="padding: 5px;">
+                <h2>Agregar Asistencia</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="{% url 'lista_asistencia_clase' %}" class="btn btn-secondary">Volver</a>
+                </form>
+            </div>
         </div>
     </div>
 </div>
