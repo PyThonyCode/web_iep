@@ -137,7 +137,7 @@ def asistencias_profesores(request):
 def editar_asistencias_profesores(request, id_asistencia):
     asistencia = get_object_or_404(AsistenciaProfesor, pk=id_asistencia)
     if request.method == 'POST':
-        form = AsistenciaProfesorForm(request.POST, asistencia)
+        form = AsistenciaProfesorForm(request.POST, instance=asistencia)
         if form.is_valid():
             form.save()
             return redirect('lista_asistencias_profesores')

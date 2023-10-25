@@ -18,7 +18,7 @@ urlpatterns = [
     # ASISTENCIAS PROFESOR
     path('asistencia_profesor/',
          views.asistencias_profesores, name='lista_asistencias_profesores'),
-    path('asistencia_profesor/<int:id_asistencia>',
+    path('asistencia_profesor/<int:id_asistencia>/editar',
          views.editar_asistencias_profesores, name='editar_asistencias_profesores'),
     path('asistencia_profesor/crear', views.agregar_asistencia_profesor,
          name='agregar_asistencia_profesor'),
