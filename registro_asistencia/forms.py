@@ -23,7 +23,7 @@ class AsistenciaProfesorForm(forms.ModelForm):
     class Meta:
         model = AsistenciaProfesor
         fields = ['profesor', 'asistencia', 'fecha_asistencia',
-                  'hora_llegada', 'hora_salida', 'motivo_falta']
+                  'hora_llegada', 'hora_salida']
 
         widgets = {
             'profesor': forms.Select(attrs={'class': 'form-select', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
@@ -31,7 +31,6 @@ class AsistenciaProfesorForm(forms.ModelForm):
             'fecha_asistencia': forms.DateInput(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
             'hora_llegada': forms.TimeInput(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
             'hora_salida': forms.TimeInput(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
-            'motivo_falta': forms.Textarea(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
         }
 
 

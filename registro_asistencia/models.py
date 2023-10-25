@@ -85,7 +85,6 @@ class AsistenciaProfesor(models.Model):
     fecha_asistencia = models.DateField(default=timezone.now)
     hora_llegada = models.TimeField(null=True, blank=True)
     hora_salida = models.TimeField(null=True, blank=True)
-    motivo_falta = models.TextField(blank=True)
 
     def __str__(self):
         return f"Asistencia de {self.profesor} el {self.fecha_asistencia}"
