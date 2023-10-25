@@ -1,4 +1,5 @@
 from django import forms
+from django.utils import timezone
 from .models import *
 
 
@@ -32,6 +33,11 @@ class AsistenciaProfesorForm(forms.ModelForm):
             'hora_salida': forms.TimeInput(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
             'motivo_falta': forms.Textarea(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
         }
+
+        def __init__(self, *args, **kwargs):
+            super(AsistenciaProfesorForm, self).__init__(*args, **kwargs)
+            self.fields['hora_llegada'].initial = timezone.now().strftime(
+                '%H:%M:%S')
 
 
 class AsistenciaClaseForm(forms.ModelForm):
