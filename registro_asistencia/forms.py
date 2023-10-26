@@ -40,11 +40,11 @@ class AsistenciaClaseForm(forms.ModelForm):
         fields = ['horario', 'profesor', 'area',
                   'sub_area', 'tema', 'grado', 'fecha_asistencia']
         widgets = {
-            'horario': forms.Select(attrs={'class': 'form-select'}),
-            'profesor': forms.Select(attrs={'class': 'form-select'}),
-            'area': forms.Select(attrs={'class': 'form-select'}),
-            'sub_area': forms.Select(attrs={'class': 'form-select'}),
-            'tema': forms.TextInput(attrs={'class': 'form-control'}),
-            'grado': forms.Select(attrs={'class': 'form-select'}),
-            'fecha_asistencia': forms.DateInput(attrs={'class': 'form-control'}),
+            'horario': forms.Select(attrs={'class': 'form-select', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
+            'profesor': forms.Select(attrs={'class': 'form-select', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
+            'area': forms.Select(attrs={'class': 'form-select', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
+            'sub_area': forms.Select(attrs={'class': 'form-select', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
+            'tema': forms.TextInput(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
+            'grado': forms.Select(attrs={'class': 'form-select', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
+            'fecha_asistencia': forms.DateInput(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
         }
