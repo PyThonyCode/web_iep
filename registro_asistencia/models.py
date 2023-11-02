@@ -83,8 +83,7 @@ class AsistenciaProfesor(models.Model):
     profesor = models.ForeignKey(Profesor, on_delete=models.CASCADE)
     asistencia = models.BooleanField()
     fecha_asistencia = models.DateField(default=timezone.now)
-    hora_llegada = models.TimeField(
-        default=timezone.now().strftime('%H:%M:%S'), null=True, blank=True)
+    hora_llegada = models.TimeField(null=True, blank=True)
     hora_salida = models.TimeField(null=True, blank=True)
 
     def __str__(self):
