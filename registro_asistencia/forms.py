@@ -29,8 +29,8 @@ class AsistenciaProfesorForm(forms.ModelForm):
             'profesor': forms.Select(attrs={'class': 'form-select', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
             'asistencia': forms.CheckboxInput(attrs={'class': 'form-check-input', 'style': 'width:20px; height:20px;border-color:rgb(174, 94, 129,0.8);'}),
             'fecha_asistencia': forms.DateInput(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
-            'hora_llegada': forms.TimeInput(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
-            'hora_salida': forms.TimeInput(attrs={'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
+            'hora_llegada': forms.TimeInput(attrs={'class': 'form-control',  'placeholder': "06/00/00", 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
+            'hora_salida': forms.TimeInput(attrs={'placeholder': "13/30/00", 'class': 'form-control', 'style': 'width:400px;background-color: rgba(243, 238, 81, 0.411);border-color:rgb(174, 94, 129,0.8); font-size: 18px; box-shadow: 2px 2px 5px rgba(174, 94, 129, 0.712);'}),
         }
 
 
