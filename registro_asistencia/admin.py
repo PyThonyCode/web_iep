@@ -4,9 +4,7 @@ from .models import Profesor, Horario, Area, Nivel, SubArea, Grado, AsistenciaPr
 # Register your models here.
 
 
-class ProfesorAdmin(admin.ModelAdmin):
-  list_display = (primer_nombre, apellido_paterno, apellido_materno, num_dni, num_celular)
-admin.site.register(Profesor,ProfesorAdmin)
+admin.site.register(Profesor)
 admin.site.register(Nivel)
 admin.site.register(Grado)
 admin.site.register(Horario)
