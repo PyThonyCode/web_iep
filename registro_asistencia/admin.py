@@ -5,7 +5,7 @@ from .models import Profesor, Horario, Area, Nivel, SubArea, Grado, AsistenciaPr
 
 
 class ProfesorAdmin(admin.ModelAdmin):
-  pass
+  list_display = (primer_nombre, apellido_paterno, apellido_materno, num_dni, num_celular)
 admin.site.register(Profesor,ProfesorAdmin)
 admin.site.register(Nivel)
 admin.site.register(Grado)
