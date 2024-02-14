@@ -3,7 +3,10 @@ from .models import Profesor, Horario, Area, Nivel, SubArea, Grado, AsistenciaPr
 
 # Register your models here.
 
-admin.site.register(Profesor)
+
+class ProfesorAdmin(admin.ModelAdmin):
+  pass
+admin.site.register(Profesor,ProfesorAdmin)
 admin.site.register(Nivel)
 admin.site.register(Grado)
 admin.site.register(Horario)
